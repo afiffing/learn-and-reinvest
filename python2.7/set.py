@@ -6,16 +6,16 @@ n = input()
 t = raw_input()
 
 if ((len(s.split(' '))==m) and (len(t.split(' '))==n) ):
-	l1 = sorted(map(int,s.split(' ')))
-	l2 = sorted(map(int,t.split(' ')))
+	l1 = map(int,s.split(' '))
+	l2 = map(int,t.split(' '))
 
 	set1 = set(l1)
 	set2 = set(l2)
-
-	l3=list(set1.difference(set2))
-	l4=list(set2.difference(set1))
+	set3 = set1.difference(set2).union(set2.difference(set1))
+	l3=sorted(list(set3))
+#	l4=sorted(list(set2.difference(set1)))
 
 	for i in l3 :
 		print i
-	for j in l4 :
-		print j
+#	for j in l4 :
+#		print j
