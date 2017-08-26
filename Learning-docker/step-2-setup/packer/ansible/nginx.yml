@@ -1,0 +1,12 @@
+---
+- name: nginx | Installation
+  hosts: localhost
+
+  roles:
+    - php-fpm
+    - nginx
+    - wordpress
+    - supervisord
+    
+    
+    

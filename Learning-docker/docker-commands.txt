@@ -1,0 +1,37 @@
+
+
+# images and containers.
+Running image is a container.
+
+
+#list out images
+docker images 
+
+#remove images
+docker rmi <imagid>
+
+#forcefully remove images
+docker rmi -f <imageid>
+
+#list out all exited container
+docker ps -a -f status=exited
+
+#remove exited container 
+docker rm $(docker ps -a -f status=exited -q)
+
+#tag an image 
+
+docker tag <img id> image-name:tagname
+example:
+docker tag bdeaff03588a afiffing/ansible:latest
+
+
+#commt changes
+docker commit -m "meassage" containerid username/imagetag:newtagname
+ 
+
+#docker push
+
+>create a repo : say afiffing/ansible
+> tag your image with a same name : afiffing/ansible
+> docker push afiffing/ansible:latest

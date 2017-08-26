@@ -1,0 +1,36 @@
+todo Devops revamp
+
+> Jenkins basic
+> Jenkins pipeline
+> docker compose
+> docker swarm
+> ansible 
+
+
+#git hub ip range
+https://help.github.com/articles/github-s-ip-addresses/
+
+#basic job setup and trigger
+
+https://www.docker.com/use-cases/cicd
+
+#useful-links
+
+https://github.com/jenkinsci/pipeline-plugin/blob/master/TUTORIAL.md#recording-test-results-and-artifacts
+https://jenkins.io/blog/2017/01/12/declarative-pipeline-beta-2/
+ 
+https://jenkins.io/doc/
+https://jenkins.io/doc/pipeline/steps/
+https://stackoverflow.com/questions/42050626/jenkins-pipeline-agent-vs-node
+https://jenkins.io/solutions/pipeline/
+
+https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin
+https://jenkins.io/doc/book/pipeline/syntax/
+
+https://dzone.com/refcardz/declarative-pipeline-with-jenkins
+
+
+
+#nodejs jenkins docker 
+
+https://github.com/jenkinsci/pipeline-examples/tree/master/jenkinsfile-examples/nodejs-build-test-deploy-docker-notify
