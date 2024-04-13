@@ -30,8 +30,7 @@ class Ratelimiter:
                     self.deque.append(currTime)
                     return jsonify({'countries': self.countries})
                 else:
-                    self.testApp.logger.info("Rate-limited")
-                    return Response(status=429, mimetype='application/json')
+                    return Response("{'Reason':'Too Many requests'}", status=429, content_type='application/json')
             self.deque.append(time.time())
             return jsonify({'countries': self.countries})
 
@@ -41,5 +40,5 @@ class Ratelimiter:
 
 
 if __name__ == '__main__':
-    r = Ratelimiter(maxRate=5, timeUnit=2)
+    r = Ratelimiter(maxRate=5, timeUnit=2) #5 Requests per 2 seconds
     r.run(True)

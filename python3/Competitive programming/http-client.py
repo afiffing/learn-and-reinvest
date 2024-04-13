@@ -1,4 +1,4 @@
-import requests, json, time
+import requests, time
 
 
 class clientRatelimiter:
@@ -9,12 +9,11 @@ class clientRatelimiter:
 if __name__ == '__main__':
     cR = clientRatelimiter()
 
-    for pings in range(0, 100):
+    for pings in range(0, 50):
+        response = requests.get(cR.api_url)
         time.sleep(0.2)
-        try:
-            response = requests.get(cR.api_url)
-            # print(f'Request number {pings}, Response status code: {response.status_code}, Response: {json.dumps(response.json())}')
-            print(f'Request number {pings}, {response.raise_for_status()}', {response.status_code})
-        except requests.exceptions.HTTPError as err:
-            print(f'Request number {pings},{err}')
-            continue
+        #response_json = response.content.decode().replace("'", '"')
+        # print(
+        #     f'Request number {pings}, Response status code: {response.status_code}, Content: {response_json}')
+        print(
+            f'Request number {pings}, Response status code: {response.status_code}, Content: {response.content}')
