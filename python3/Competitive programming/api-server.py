@@ -13,7 +13,7 @@ class Ratelimiter:
         self.maxRate = maxRate
         self.timeUnit = timeUnit
         self.deque = deque(maxlen=maxRate)
-        self.testApp = Flask(__name__)
+        self.app = Flask(__name__)
 
         self.countries = [
             {'id': 1, 'country': 'India', 'capital': 'New Delhi'},
@@ -22,7 +22,7 @@ class Ratelimiter:
 
     def serverStart(self):
 
-        @self.testApp.get('/api/v1/countries')
+        @self.app.get('/api/v1/countries')
         def get_countries():
             if len(self.deque) == self.deque.maxlen:
                 currTime = time.time()
@@ -36,7 +36,7 @@ class Ratelimiter:
 
     def run(self, debug_mode):
         self.serverStart()
-        self.testApp.run(debug=debug_mode)
+        self.app.run()
 
 
 if __name__ == '__main__':
