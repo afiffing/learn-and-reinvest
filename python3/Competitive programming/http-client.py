@@ -2,8 +2,10 @@ import requests, time
 
 
 class clientRatelimiter:
-    port = 5000
-    api_url = f'http://localhost:{port}/api/v1/countries'
+
+    def __init__(self):
+        self.port = 5000
+        self.api_url = f'http://localhost:{self.port}/api/v1/countries'
 
 
 if __name__ == '__main__':
