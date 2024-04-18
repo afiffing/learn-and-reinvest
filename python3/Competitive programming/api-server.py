@@ -1,3 +1,4 @@
+# Author: Ashish Singh
 # Rate limiiter is a threshold based problem statement
 # sliding window is a threshold
 # X requests fits in sliding window of Y seconds

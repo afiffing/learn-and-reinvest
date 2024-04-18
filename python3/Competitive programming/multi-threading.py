@@ -1,3 +1,7 @@
+# Author: Ashish Singh
+# WIP
+
+
 import requests, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import uuid
