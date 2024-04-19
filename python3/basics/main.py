@@ -1,6 +1,5 @@
 import multiple_inheritance
 import multilevel_inheritance
-from multilevel_inheritance import outside_work
 
 
 # OOPs
