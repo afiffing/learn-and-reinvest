@@ -65,3 +65,4 @@ if __name__ == "__main__":
 
     for add in ll.addlist:
         print(ll.swapPairs(add))
+
