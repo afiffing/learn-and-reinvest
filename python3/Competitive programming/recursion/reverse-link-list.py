@@ -18,8 +18,6 @@ class Solution:
         print(f"address of new node i.e. {newnode.data}: {newnode}")
 
         self.addlist = self.addlist + (newnode,)
-        print(f"address of new node i.e. {newnode.data}: {newnode}")
-
         if self.head is None:
             self.head = newnode
             return
@@ -48,12 +46,8 @@ class Solution:
         return self.head
 
     def reversal(self, head):  # local head reference
-
         if not head or not head.next:  # base condition for last element while reversal.
             return f'head is at {head.data}, {head}'
-
-        # print(f'{head.data, head.next}')
-
         '''
         1 -> [ 2 -> rest of the list -> None]
         |
@@ -64,17 +58,11 @@ class Solution:
                       head       
 
         '''
-
         print(f'recursion call for: {head.next.data}')
-
         rest = self.reversal(head.next)
         head.next.next = head
         print(f'{head.next.data} --> {head.data}--> None')
-
         head.next = None
-
-
-
         return rest  # 1
 
 
@@ -101,3 +89,9 @@ if __name__ == "__main__":
         ll.insertAtLast(node)
 
     print(ll.addlist)
+
+    for first_head in ll.addlist:
+        break
+
+    print("################# reversal by recursion")
+    print(ll.reversal(first_head))
