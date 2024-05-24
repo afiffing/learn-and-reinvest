@@ -30,31 +30,28 @@ class Solution:
 
 
 if __name__ == "__main__":
+    ll = comm_funcs.insertOps()
     sol = Solution()
+
     listNode = [1, 2, 3, 4]
     for node in listNode:
-        comm_funcs.insertAtBeginning(node)
+        ll.insertAtLast(node)
 
-    print("################# --> insert at beginning")
-    print(comm_funcs.addlist)
+    print(ll.addlist)
 
-    for first_head in comm_funcs.addlist:
+    for first_element in ll.addlist:
         break
 
-    print("################# reversal by recursion")
-    print(sol.reversal(first_head))
+    print(sol.reversal(first_element))
 
-    print("################# insert at last <--")
-
-    comm_funcs.addlist = ()
+    ll.addlist = ()
 
     for node in listNode:
-        comm_funcs.insertAtLast(node)
+        ll.insertAtBeginning(node)
+    
+    print(ll.addlist)
 
-    print(comm_funcs.addlist)
-
-    for first_head in comm_funcs.addlist:
+    for first_element in ll.addlist:
         break
 
-    print("################# reversal by recursion")
-    print(sol.reversal(first_head))
+    print(sol.reversal(first_element))
