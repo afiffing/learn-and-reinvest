@@ -3,3 +3,4 @@
 ./Learning-docker/
 ./test-rakuten
 .idea/
+**/__pycache__/
