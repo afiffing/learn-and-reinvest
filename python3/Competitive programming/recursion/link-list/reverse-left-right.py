@@ -20,7 +20,7 @@ class Solution:
     def reverseLeftRight(self, head):
  
         def helper(self, rec_head, pos):
-            print(f'head at: {rec_head.data}')
+            print(f'head at: {rec_head}')
             print(f'position: {pos}')
 
             if pos == self.right or not rec_head.next:
