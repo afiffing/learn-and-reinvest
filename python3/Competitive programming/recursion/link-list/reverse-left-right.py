@@ -9,7 +9,7 @@ class Solution:
         self.left = left
         self.right = right
 
-    def reverseLeftRight(self, head):
+    def reverseBetween(self, head):
  
         def helper(self, rec_head, pos):
             print(f'head at: {rec_head.data}')
@@ -32,7 +32,7 @@ class Solution:
             self.position += 1
             print('position and head increased\n')
             head = head.next 
-            self.reverseLeftRight(head)              
+            self.reverseBetween(head)              
         else:
             helper(self,head.next,self.position)
 
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     for elem in ll.addlist:
         break
 
-    sol.reverseLeftRight(elem)
+    sol.reverseBetween(elem)
 
 
      
