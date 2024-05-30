@@ -6,42 +6,46 @@ class Solution:
 
     def __init__(self, left, right) -> None:
         self.position = 0
+        self.prev = None
         self.left = left
         self.right = right
 
     def reverseBetween(self, head):
  
         def helper(self, rec_head, pos):
-            print(f'head at: {rec_head.data}')
-            print(f'position: {pos}')
+            print(f'\npos: {pos}')
+            print(f'recursion entered: {rec_head.data}')
 
-            if pos == self.right or not rec_head.next:
-                print(f'base case met, recursion stopped {rec_head.data-1}')
+            if pos == self.right-1:
                 return rec_head
 
-            if pos < self.right:
+            if pos < self.right-1:
                 pos += 1
-                print('reversal started\n')
+                print(f'recursion called : {rec_head.next.data}' )
+
                 rest = helper(self, rec_head.next, pos)
                 rec_head.next.next = rec_head
-                print(f'{rec_head.next.data} --> {rec_head.data}')
+                print(f'\n{rec_head.next.data} --> {rec_head.data}')
 
+                print(f'rest data: {rest.data}')
                 return rest
 
         if  self.position < self.left-1:
             self.position += 1
-            print('position and head increased\n')
-            head = head.next 
+            self.prev = head
+            head = head.next
             self.reverseBetween(head)              
         else:
-            helper(self,head.next,self.position)
-
+            self.prev.next=helper(self,head,self.position)
+        
+        print(f'{self.prev.data} --> {self.prev.next.data}')
+        return self.prev.data
 
 if __name__ == "__main__":
     ll = comm_funcs.insertOps()
-    sol = Solution(1,4)
+    sol = Solution(2,4)
 
-    listNode = [1,2,3,4,5,6]
+    listNode = [1,2,3,4,5]
 
     for node in listNode:
         ll.insertAtLast(node)
@@ -51,6 +55,7 @@ if __name__ == "__main__":
     for elem in ll.addlist:
         break
 
+    print(listNode)
     sol.reverseBetween(elem)
 
 
