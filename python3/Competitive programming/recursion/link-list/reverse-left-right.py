@@ -37,8 +37,9 @@ class Solution:
             self.reverseBetween(head)              
         else:
             self.prev.next=helper(self,head,self.position)
+            print(f'{self.prev.data} --> {self.prev.next.data}')
+
         
-        print(f'{self.prev.data} --> {self.prev.next.data}')
         return self.prev.data
 
 if __name__ == "__main__":
