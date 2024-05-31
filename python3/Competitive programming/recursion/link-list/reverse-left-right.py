@@ -1,4 +1,5 @@
 # Author: Ashish Singh
+# but lc problem https://leetcode.com/problems/reverse-linked-list-ii/ test case still failing
 
 import common_link_list as comm_funcs
 
@@ -11,12 +12,15 @@ class Solution:
         self.right = right
 
     def reverseBetween(self, head):
- 
+    
+
         def helper(self, rec_head, pos):
             print(f'\npos: {pos}')
             print(f'recursion entered: {rec_head.data}')
 
             if pos == self.right-1:
+                global right_next
+                right_next = rec_head.next
                 return rec_head
 
             if pos < self.right-1:
@@ -24,11 +28,17 @@ class Solution:
                 print(f'recursion called : {rec_head.next.data}' )
 
                 rest = helper(self, rec_head.next, pos)
-                rec_head.next.next = rec_head
                 print(f'\n{rec_head.next.data} --> {rec_head.data}')
+                rec_head.next.next = rec_head
+                rec_head.next = right_next
 
-                print(f'rest data: {rest.data}')
+                print(f'{rec_head.data} --> {right_next.data}')
+                print('end of one recursion')
+
                 return rest
+
+        if not head or not head.next:
+            return head
 
         if  self.position < self.left-1:
             self.position += 1
@@ -37,9 +47,9 @@ class Solution:
             self.reverseBetween(head)              
         else:
             self.prev.next=helper(self,head,self.position)
-        
-        print(f'{self.prev.data} --> {self.prev.next.data}')
-        return self.prev.data
+            print(f'{self.prev.data} --> {self.prev.next.data}')
+
+        return self.prev.data,self.prev.next.data
 
 if __name__ == "__main__":
     ll = comm_funcs.insertOps()
@@ -55,8 +65,7 @@ if __name__ == "__main__":
     for elem in ll.addlist:
         break
 
-    print(listNode)
-    sol.reverseBetween(elem)
+    print(sol.reverseBetween(elem))
 
 
      
