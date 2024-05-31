@@ -18,14 +18,8 @@ class Solution:
             print(f'recursion entered: {rec_head.data}')
 
             if pos == self.right-1:
-                # if hasattr(str(rec_head), '__iter__'):
-                #     print('iterable')
-                # else:
-                #     print('not iterable')
-                # right_next = rec_head.next
                 global right_next
                 right_next = rec_head.next
-
                 return rec_head
 
             if pos < self.right-1:
@@ -33,14 +27,17 @@ class Solution:
                 print(f'recursion called : {rec_head.next.data}' )
 
                 rest = helper(self, rec_head.next, pos)
+                print(f'\n{rec_head.next.data} --> {rec_head.data}')
+                rec_head.next.next = rec_head
                 rec_head.next = right_next
 
-                print(f'\n{rec_head.next.data} --> {rec_head.data}')
-
-                print(f'\n{rec_head.data} --> {right_next.data}')
+                print(f'{rec_head.data} --> {right_next.data}')
+                print('end of one recursion')
 
                 return rest
 
+        if not head or not head.next:
+            return head
 
         if  self.position < self.left-1:
             self.position += 1
@@ -51,8 +48,7 @@ class Solution:
             self.prev.next=helper(self,head,self.position)
             print(f'{self.prev.data} --> {self.prev.next.data}')
 
-        
-        return self.prev.data
+        return self.prev.data,self.prev.next.data
 
 if __name__ == "__main__":
     ll = comm_funcs.insertOps()
@@ -68,8 +64,7 @@ if __name__ == "__main__":
     for elem in ll.addlist:
         break
 
-    print(listNode)
-    sol.reverseBetween(elem)
+    print(sol.reverseBetween(elem))
 
 
      
