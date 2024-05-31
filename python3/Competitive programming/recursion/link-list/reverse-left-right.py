@@ -11,12 +11,21 @@ class Solution:
         self.right = right
 
     def reverseBetween(self, head):
- 
+    
+
         def helper(self, rec_head, pos):
             print(f'\npos: {pos}')
             print(f'recursion entered: {rec_head.data}')
 
             if pos == self.right-1:
+                # if hasattr(str(rec_head), '__iter__'):
+                #     print('iterable')
+                # else:
+                #     print('not iterable')
+                # right_next = rec_head.next
+                global right_next
+                right_next = rec_head.next
+
                 return rec_head
 
             if pos < self.right-1:
@@ -24,11 +33,14 @@ class Solution:
                 print(f'recursion called : {rec_head.next.data}' )
 
                 rest = helper(self, rec_head.next, pos)
-                rec_head.next.next = rec_head
+                rec_head.next = right_next
+
                 print(f'\n{rec_head.next.data} --> {rec_head.data}')
 
-                print(f'rest data: {rest.data}')
+                print(f'\n{rec_head.data} --> {right_next.data}')
+
                 return rest
+
 
         if  self.position < self.left-1:
             self.position += 1
