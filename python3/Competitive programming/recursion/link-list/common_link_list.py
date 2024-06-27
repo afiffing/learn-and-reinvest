@@ -34,12 +34,18 @@ class insertOps:
                   head
             '''
             self.head = newnode
+        return self.head
 
     def insertAtBeginning(self, data):
+        
         newnode = Node(data)
-        print(f"address of new node i.e. {newnode.data}: {newnode}")
-        newnode.next = self.head
-        self.head = newnode
+
+        if self.head is None:
+            self.head = newnode
+            return
+        else:
+            newnode.next = self.head
+            self.head = newnode
         self.addlist = (newnode,) + self.addlist
 
         return self.head
