@@ -49,3 +49,18 @@ class insertOps:
         self.addlist = (newnode,) + self.addlist
 
         return self.head
+    
+class delOps():
+
+    def __init__(self) -> None:
+        self.head = None
+
+    def delInMiddle(self,head):
+        if not head or not head.next:
+            return head
+    
+        head.next = head.next.next
+        head.data = head.next.data
+
+        
+        
