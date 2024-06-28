@@ -13,4 +13,5 @@ else
     git checkout memstrong
     git pull origin --rebase master
     git push origin memstrong
+    exit 0
 fi
