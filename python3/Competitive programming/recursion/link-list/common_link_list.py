@@ -58,9 +58,8 @@ class delOps():
     def delInMiddle(self,head):
         if not head or not head.next:
             return head
-    
-        head.next = head.next.next
         head.data = head.next.data
+        head.next = head.next.next
 
         
         
