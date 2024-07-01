@@ -60,6 +60,17 @@ class delOps():
             return head
         head.data = head.next.data
         head.next = head.next.next
+    
+    def delLegacyWay(self, head, val):
+        previous = head
+        current = head
+        if not head or not head.next:
+            return 
+        if head.data == val:
+            head.data = head.next.data
+            head.next = head.next.next
+        else:
+            self.delLegacyWay(head.next.data)
 
         
         
