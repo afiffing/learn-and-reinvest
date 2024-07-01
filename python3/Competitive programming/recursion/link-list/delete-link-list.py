@@ -2,15 +2,7 @@
 import common_link_list as comm_funcs
 
 
-class Solution:
-
-    def __init__(self) -> None:
-        self.head = None
-
-
 if __name__ == "__main__":
-
-    sol = Solution()
 
     ll = comm_funcs.insertOps()
 
@@ -24,4 +16,8 @@ if __name__ == "__main__":
     for elem in ll.addlist:
         break
 
-    del = comm_funcs.
+    print(type(elem))
+
+    dl = comm_funcs.delOps
+
+    print(dl.delLegacyWay(dl,elem,3))
