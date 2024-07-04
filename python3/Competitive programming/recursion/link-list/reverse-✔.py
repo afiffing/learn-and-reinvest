@@ -8,25 +8,13 @@ class Solution:
     def __init__(self):
         self.head = None
 
-    def reversal(self, head):  # local head reference
-        if not head or not head.next:  # base condition for last element while reversal.
-            return f'head is at {head.data}, {head}'
-        '''
-        1 -> [ 2 -> rest of the list -> None]
-        |
-        head
-
-        None <- 1 <- [ 2 -> rest of the list -> None]
-                       |
-                      head       
-
-        '''
-        print(f'recursion call for: {head.next.data}')
+    def reversal(self, head):  
+        if not head or not head.next:
+            return head
         rest = self.reversal(head.next)
         head.next.next = head
-        print(f'{head.next.data} --> {head.data}--> None')
         head.next = None
-        return rest  # 1
+        return rest
 
 
 if __name__ == "__main__":
