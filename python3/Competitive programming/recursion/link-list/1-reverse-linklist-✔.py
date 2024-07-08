@@ -2,7 +2,7 @@
 # link list https://www.youtube.com/watch?v=RhCGA4jlPmQ
 # Author: Ashish Singh
 
-import common_link_list as comm_funcs
+import _common_link_list as comm_funcs
 
 class Solution:
     def __init__(self):

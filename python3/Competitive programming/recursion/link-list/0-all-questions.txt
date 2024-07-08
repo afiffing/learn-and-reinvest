@@ -1,24 +1,12 @@
-
-https://leetcode.com/problems/reverse-linked-list/
-
-https://leetcode.com/problems/delete-node-in-a-linked-list/description/ 
-
-https://leetcode.com/problems/remove-linked-list-elements/ 
-
+https://leetcode.com/problems/reverse-linked-list/ 
+https://leetcode.com/problems/delete-node-in-a-linked-list/description/  #modify value
+https://leetcode.com/problems/remove-linked-list-elements/  #don't modify value
 https://leetcode.com/problems/swap-nodes-in-pairs/
-
-
 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/ open
-
 https://leetcode.com/problems/palindrome-linked-list/description/ open
-
 https://leetcode.com/problems/reverse-linked-list-ii/description/ open | attempted 
-
 https://leetcode.com/problems/remove-nodes-from-linked-list/description/ open
-
 https://leetcode.com/problems/reverse-nodes-in-even-length-groups/description/ open
-
 https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/ open
-
 https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/description/ open
 
