@@ -1,7 +1,7 @@
 #Author: Ashish Singh
 #Idea is to match values with an 
 
-import common_link_list as comm_funcs
+import _common_link_list as comm_funcs
 
 
 class Solution():

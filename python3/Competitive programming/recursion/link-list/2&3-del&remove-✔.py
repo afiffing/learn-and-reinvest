@@ -1,5 +1,5 @@
 
-import common_link_list as comm_funcs
+import _common_link_list as comm_funcs
 
 
 if __name__ == "__main__":
