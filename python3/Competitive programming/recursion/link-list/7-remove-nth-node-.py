@@ -3,16 +3,15 @@ import _common_link_list as comm_funcs
 
 class Solution:        
 
-    def revLinkList(self,head):
+    def revLinkList(self,head: Optional[ListNode])-> Optional[ListNode]:
         if not head or not head.next:
             return head
         rest = self.revLinkList(head.next)
         head.next.next = head
         head.next = None
-        
         return rest
     
-    def removeNthFromEnd(self, head, n):
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         if not head.next:
             return None
 
@@ -35,7 +34,6 @@ class Solution:
             prev = curr
             curr = curr.next
         
-        print(head)
         return self.revLinkList(temp)
     
 
