@@ -33,6 +33,13 @@ class Solution:
            
        return curr
 
+    def findMiddle2(self, head):
+       slow = fast = head
+       while fast and fast.next:
+          slow = slow.next
+          fast = fast.next.next
+           
+       return slow
 
 if __name__ == "__main__":
     ll = comm_funcs.insertOps()
