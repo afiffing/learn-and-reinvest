@@ -9,7 +9,6 @@ class Solution:
         rest = self.revLinkList(head.next)
         head.next.next = head
         head.next = None
-        
         return rest
     
     def removeNthFromEnd(self, head, n):
@@ -35,7 +34,6 @@ class Solution:
             prev = curr
             curr = curr.next
         
-        print(head)
         return self.revLinkList(temp)
     
 
