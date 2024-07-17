@@ -16,6 +16,19 @@ class Solution:
         head.next = None
         return rest
 
+    def reversalIterative(self, head):  
+        prev, curr = None, head
+        while head:
+            #curr.next, prev, curr = prev, curr, curr.next
+            '''
+            Reversal and link list in general, order of action matters to avoid cycle 
+            '''
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
+
 
 if __name__ == "__main__":
     ll = comm_funcs.insertOps()
