@@ -6,7 +6,8 @@ https://leetcode.com/problems/middle-of-the-linked-list/description/
 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/ 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/ 
 https://leetcode.com/problems/reorder-list/description/
-https://leetcode.com/problems/sort-list/description/
+https://leetcode.com/problems/merge-two-sorted-lists/
+https://leetcode.com/problems/sort-list/description
 https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1 
 https://www.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1
 https://leetcode.com/problems/add-two-numbers/
