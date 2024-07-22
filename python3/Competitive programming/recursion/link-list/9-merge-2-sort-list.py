@@ -19,12 +19,12 @@ class Solution:
                     list2.next = tmp1
                 list1 = tmp1
                 list2 = tmp2
-            elif 
-                list2.next = list1.next
-                if tmp2.val <= list2.next.val:
-                    list1.next = tmp2              
-                list1 = tmp1
-                list2 = tmp2
+                else: 
+                    list2.next = list1.next
+                    if tmp2.val <= list2.next.val:
+                        list1.next = tmp2              
+                    list1 = tmp1
+                    list2 = tmp2
 
 
 
