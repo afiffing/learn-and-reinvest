@@ -4,9 +4,9 @@
 
 class Solution:
     def bubbleSort(self,arr,n):
-        if n == 1:                   #base condition added
+        if n == 1:                   #base condition added, n=1, make i=n-1=0
             return
-        didSwap = 0                  #iblock removed
+        didSwap = 0                  #iblock removed via i=n-1
         for j in range(0,n-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
