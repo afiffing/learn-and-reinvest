@@ -18,6 +18,6 @@ class Solution:
 if __name__ == "__main__":
     arr = [8,7,6,1,0,9,2]
     n = len(arr)
-    Solution().quickSort(arr,0,n-1)
+    Solution().bubbleSort(arr,n-1)
     for i in arr:
         print(i,end=" ")
