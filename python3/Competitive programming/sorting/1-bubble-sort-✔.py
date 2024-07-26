@@ -15,13 +15,9 @@ class Solution:
         return arr
 
 
-#forget about passing the value
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        arr = list(map(int, input().strip().split()))
-        Solution().bubbleSort(arr, n)
-        for i in range(n):
-            print(arr[i],end=" ")
-        print()
+    arr = [8,7,6,1,0,9,2]
+    n = len(arr)
+    Solution().quickSort(arr,0,n-1)
+    for i in arr:
+        print(i,end=" ")
