@@ -12,7 +12,6 @@ class Solution:
         return arr
 
 
-if __name__=="__main__":
 if __name__ == "__main__":
     arr = [8,7,6,1,0,9,2]
     n = len(arr)
