@@ -7,7 +7,7 @@ class Solution:
         for i in range(n):                       # i = 0 to n-1
             mini = i  
             for j in range(i+1,n):                # j = i+1, n
-                if arr[j] < arr[mini]:
+                if arr[mini] > arr[j]:            # mini is first, j is next, swap when first > next, right to left traverse
                     mini = j                       #find the minimum for i loop run and swap and loop on i O(N*N)
             arr[i], arr[mini] = arr[mini], arr[i]
         
