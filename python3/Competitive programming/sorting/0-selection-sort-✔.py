@@ -3,10 +3,10 @@
 
 
 class Solution: 
-    def selectionSort(self, arr,n):
-        for i in range(0,n):                       # i = 0 to n-1
+    def selectionSort(self,arr,n):
+        for i in range(n):                       # i = 0 to n-1
             mini = i  
-            for j in range(i+1,n):                # j = i+1, n-1+1
+            for j in range(i+1,n):                # j = i+1, n
                 if arr[j] < arr[mini]:
                     mini = j                       #find the minimum for i loop run and swap and loop on i O(N*N)
             arr[i], arr[mini] = arr[mini], arr[i]
@@ -16,8 +16,7 @@ class Solution:
 
 if __name__ == "__main__":
     arr = [8,7,6,1,0,9,2]
-    n = len(arr)
-    Solution().selectionSort(arr,0,n-1)
+    Solution().selectionSort(arr,len(arr))
     for i in arr:
         print(i,end=" ")
 
