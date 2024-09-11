@@ -4,10 +4,10 @@
 
 class Solution:
     def bubbleSort(self,arr,n):
-        if n == 1:                   #iblock removed via n=1, range(n-1,0,-1)
+        if n == 2:                   #iblock removed via n=1, range(n-1,0,-1)
             return
         didSwap = 0                  
-        for j in range(0,n-1):       #no iblock, hence max of i, i.e. i=n-1 instead of range(0,i)
+        for j in range(n-1):       #no iblock, hence max of i, i.e. i=n-1 instead of range(0,i)
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 didSwap = 1
@@ -18,6 +18,6 @@ class Solution:
 
 if __name__ == "__main__":
     arr = [8,7,6,1,0,9,2]
-    Solution().bubbleSort(arr,0,len(arr)-1)
+    Solution().bubbleSort(arr,len(arr))
     for i in arr:
         print(i,end=" ")

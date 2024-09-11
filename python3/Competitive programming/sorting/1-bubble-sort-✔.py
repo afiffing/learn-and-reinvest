@@ -6,7 +6,7 @@ class Solution:
     def bubbleSort(self,arr,n):
         for i in range(n-1,0,-1):        # i is n-1 to 1
             didSwap = 0
-            for j in range(0,i):       # everything is inside j block, arr[j],arr[j+1], "j block is bubble"
+            for j in range(i):       # everything is inside j block, arr[j],arr[j+1], "j block is bubble"
                 if arr[j]>arr[j+1]:     # j is first, j+1 is next, swap when first > next, right to left traverse
                     arr[j],arr[j+1] = arr[j+1],arr[j]
                     didSwap = 1
