@@ -1,0 +1,17 @@
+List = indexed collection of items
+list = [ 1, two, [3,4]]
+
+Array = indexed collection of items of same datatype.
+array = [ 1, 2, 3, 4]
+
+
+Tuple = indexed, similar to list  but immutable.
+tuple = (1,2,"three","four")
+
+Set = Not indexed and  unique elements only
+set = {1,2,"three","four",1,2} -> {2,"three","four",1}
+
+
+Queue = Link List
+
+Dequeue = Doubly link list
