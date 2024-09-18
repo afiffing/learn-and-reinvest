@@ -42,12 +42,12 @@ class Boy(Male):
         Human.work(self)
         print("Boy can work")
 
+if __name__ == "__main__":
+    b1 = Boy()
+    b1.work()
+    b1.sleep()
+    b1.eat()
+    print(b1.m)
+    print(b1.h)
 
-b1 = Boy()
-b1.work()
-b1.sleep()
-b1.eat()
-print(b1.m)
-print(b1.h)
-
-print(__name__)
+    print(__name__)

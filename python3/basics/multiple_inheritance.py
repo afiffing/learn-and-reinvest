@@ -20,8 +20,9 @@ class Male:
 # multiple inheritance  #order of inheritance matters
 class Boy(Human, Male):
     def __init__(self):  # better to include all the attribute from all the classes.
-        Human.__init__(self)
-        Male.__init__(self)
+        # Human.__init__(self)
+        # Male.__init__(self)
+        super.__init__(self)
 
     def work(self):
         print("Boy can work")
