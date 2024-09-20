@@ -9,6 +9,8 @@ Tuple = indexed, similar to list  but immutable.
 tuple = (1,2,"three","four")
 
 Set = Not indexed and  unique elements only
+s = set()
+s.add('1')
 set = {1,2,"three","four",1,2} -> {2,"three","four",1}
 
 
